@@ -38,7 +38,15 @@ export default function ExerciseDetailScreen() {
 
 
   function showManageMenu() {
-
+    Alert.alert(
+      "Manage Exercise",
+      "What would you like to do?",
+      [
+        { text: "Delete Exercise", onPress: handleDelete, style: "destructive" },
+        { text: "Edit Exercise", onPress: () => Alert.alert("Edit feature coming soon!") },
+        { text: "Cancel", style: "cancel" },
+      ]
+    );
   }
 
   async function handleDelete() {
